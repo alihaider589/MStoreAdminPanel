@@ -11,6 +11,7 @@ import Sales from './src/Components/Sales'
 import Products from './src/Components/Products'
 
 import Drawer from './src/Components/Drawer'
+import Customerpage from './src/Components/CustomerPage';
 
 
 
@@ -53,6 +54,10 @@ export default class App extends Component {
     Products:{
       screen:Products
     },
+    CustomerPage:{
+
+      screen:Customerpage
+    }
   },
   
   {

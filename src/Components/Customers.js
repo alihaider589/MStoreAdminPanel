@@ -43,13 +43,16 @@ Customers
   <ScrollView showsVerticalScrollIndicator={false} >
 
   <List>
+
             <ListItem avatar>
               <Left>
                 <Thumbnail source={{ uri: 'https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-1/p160x160/48373829_1466766893466889_6332830974740529152_n.jpg?_nc_cat=106&_nc_ht=scontent.fkhi1-1.fna&oh=5a03f7de637a96a9451bf29c735ca552&oe=5D1BCFAB' }} />
               </Left>
               <Body>
+    <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"https://scontent.fkhi1-1.fna.fbcdn.net/v/t1.0-1/p160x160/48373829_1466766893466889_6332830974740529152_n.jpg?_nc_cat=106&_nc_ht=scontent.fkhi1-1.fna&oh=5a03f7de637a96a9451bf29c735ca552&oe=5D1BCFAB",Title:"Ali Haider"})}>
                 <Text>Ali Haider</Text>
                 <Text note>Bought Iphone XS</Text>
+    </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 1</Text>
