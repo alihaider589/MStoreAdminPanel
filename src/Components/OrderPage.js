@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { View, Text,Image ,Dimensions,TouchableOpacity, ScrollView } from 'react-native';
 import { Container, Left,Header,Title,Right,Body,List,ListItem, Thumbnail,Icon, } from 'native-base';
 
-export default class Customerpage extends Component {
+export default class OrderPage extends Component {
+  static navigationOptions={
+    drawerLabel:()=>null
+}
   constructor(props) {
     super(props);
     this.state = {
     };
   }
-  static navigationOptions={
-    drawerLabel:()=>null
-}
+
   
   render() {
     const screenWidth = Dimensions.get('window').width
@@ -22,7 +23,7 @@ export default class Customerpage extends Component {
 <Header  style={{backgroundColor:'white',borderBottomWidth:3,borderBottomColor:'rgb(207, 207, 207)'}}>
 <Left>
   <TouchableOpacity
-  onPress={()=>this.props.navigation.navigate("Customers")}
+  onPress={()=>this.props.navigation.navigate("Orders")}
   >
 
 <Image source={{uri:"https://image.flaticon.com/icons/png/512/60/60972.png" }}style={{height:20,width:20}}/>
@@ -56,7 +57,7 @@ export default class Customerpage extends Component {
 <List>
             <ListItem >
               <Body>
-                <Text style={{fontWeight:'bold'}}>Name</Text>
+                <Text style={{fontWeight:'bold'}}>Product Name</Text>
               </Body>
               <Right>
                   <Text style={{fontSize:10}}>{Name}</Text>
@@ -66,38 +67,38 @@ export default class Customerpage extends Component {
 
             <ListItem >
               <Body>
-                <Text>Email</Text>
+                <Text>Customer Name</Text>
               </Body>
               <Right>
-                  <Text style={{fontSize:10}}>alihaider589@outlook.com</Text>
+                  <Text style={{fontSize:10}}>Ali Haider</Text>
               </Right>
             </ListItem>
 
 
             <ListItem >
               <Body>
-                <Text>Account Created</Text>
+                <Text>Payment Getway</Text>
               </Body>
               <Right>
-                  <Text style={{fontSize:10}}>March 21,2019</Text>
+                  <Text style={{fontSize:10}}>Square</Text>
               </Right>
             </ListItem>
 
             <ListItem >
               <Body>
-                <Text>Tottal Spend </Text>
+                <Text>Refund </Text>
               </Body>
               <Right>
-                  <Text style={{fontSize:10}}>203232$</Text>
+                  <Text style={{fontSize:10}}>No$</Text>
               </Right>
             </ListItem>
 
             <ListItem >
               <Body>
-                <Text>Total Orders</Text>
+                <Text>Reciept Numbers</Text>
               </Body>
               <Right>
-                  <Text style={{fontSize:10}}>2</Text>
+                  <Text style={{fontSize:10}}>#131313</Text>
               </Right>
             </ListItem>
           </List>

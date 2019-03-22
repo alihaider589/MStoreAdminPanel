@@ -5,6 +5,9 @@ import { Container, Header, Left, Icon, Title, Body ,List,ListItem,Thumbnail,Rig
 import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Customers extends Component {
+  static navigationOptions={
+    drawerLabel:()=>null
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -67,8 +70,12 @@ Customers
                 <Thumbnail source={{ uri: 'https://opinionhall.com/wp-content/uploads/2018/07/weird-bug-makes-samsung-phones-text-random-photos-to-random-people.jpg' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"https://opinionhall.com/wp-content/uploads/2018/07/weird-bug-makes-samsung-phones-text-random-photos-to-random-people.jpg",Title:"John Doe"})}>
+        
                 <Text>John Doe</Text>
+
                 <Text note>Bought Computer By Aptron</Text>
+</TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 2</Text>
@@ -81,8 +88,11 @@ Customers
                 <Thumbnail source={{ uri: 'http://pm1.narvii.com/5866/76b201e12343e860570c62f4067307e04ed545fe_00.jpg' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"http://pm1.narvii.com/5866/76b201e12343e860570c62f4067307e04ed545fe_00.jpg",Title:"Peter Parker"})}>
+
                 <Text>Peter Parker</Text>
                 <Text note>Bought SpiderMan Suit</Text>
+              </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 3 </Text>
@@ -96,8 +106,11 @@ Customers
                 <Thumbnail source={{ uri: 'http://images4.fanpop.com/image/answers/246000/246187_1305768308989_470_477.jpg' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"http://images4.fanpop.com/image/answers/246000/246187_1305768308989_470_477.jpg",Title:"Spongebob"})}>
+
                 <Text>Spongebob</Text>
                 <Text note>Bought Nothing</Text>
+                </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 4</Text>
@@ -111,8 +124,11 @@ Customers
                 <Thumbnail source={{ uri: 'http://1.bp.blogspot.com/_yKv0T3m8Edc/SLzqA11DQsI/AAAAAAAAAFg/Mtmg4mDcN8I/s320/ppg+buttercup.jpg' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"http://1.bp.blogspot.com/_yKv0T3m8Edc/SLzqA11DQsI/AAAAAAAAAFg/Mtmg4mDcN8I/s320/ppg+buttercup.jpg",Title:"Blossom"})}>
+
                 <Text>Blossom</Text>
                 <Text note>Bought Iphone XS</Text>
+                </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 5</Text>
@@ -125,9 +141,13 @@ Customers
               <Left>
                 <Thumbnail source={{ uri: 'https://i.pinimg.com/originals/be/d4/bb/bed4bbf092ac08861584e105fed6a096.gif' }} />
               </Left>
+            
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"https://i.pinimg.com/originals/be/d4/bb/bed4bbf092ac08861584e105fed6a096.gif",Title:"Micky Mouse"})}>
+
                 <Text>Micky Mouse</Text>
                 <Text note>Bought Iphone XS</Text>
+                </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 6</Text>
@@ -141,8 +161,11 @@ Customers
                 <Thumbnail source={{ uri: 'http://clipart-library.com/images/qTBo44L6c.png' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"http://clipart-library.com/images/qTBo44L6c.png",Title:"Dexter"})}>
+
                 <Text>Dexter</Text>
                 <Text note>Bought Iphone XS</Text>
+                </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 7</Text>
@@ -156,8 +179,11 @@ Customers
                 <Thumbnail source={{ uri: 'https://i1.wp.com/orig00.deviantart.net/9378/f/2017/291/8/9/cartoon_character__by_dtoro-dbr18pv.jpg' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"https://i1.wp.com/orig00.deviantart.net/9378/f/2017/291/8/9/cartoon_character__by_dtoro-dbr18pv.jpg",Title:"Boy"})}>
+
                 <Text>Boy </Text>
                 <Text note>Bought Iphone XS</Text>
+                </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 1</Text>
@@ -171,8 +197,11 @@ Customers
                 <Thumbnail source={{ uri: 'https://i.pinimg.com/236x/4e/de/89/4ede89213a280e7be594c96633c56501--anime-manga.jpg' }} />
               </Left>
               <Body>
+              <TouchableOpacity onPress={()=>this.props.navigation.navigate("CustomerPage",{Picture:"https://i.pinimg.com/236x/4e/de/89/4ede89213a280e7be594c96633c56501--anime-manga.jpg",Title:"Anime"})}>
+
                 <Text>Anime</Text>
                 <Text note>Bought Iphone XS</Text>
+                </TouchableOpacity>
               </Body>
               <Right>
                 <Text note>Created Jul 1</Text>
@@ -180,19 +209,7 @@ Customers
             </ListItem>
 
 
-            <ListItem avatar>
-              <Left>
-                <Thumbnail source={{ uri: 'http://images6.fanpop.com/image/polls/1415000/1415718_1410216932147_full.png?v=1410217322' }} />
-              </Left>
-              <Body>
-                <Text>Blossom</Text>
-                <Text note>Bought Iphone XS</Text>
-              </Body>
-              <Right>
-                <Text note>Created Jul 1</Text>
-              </Right>
-            </ListItem>
-
+           
 
           </List>
   </ScrollView>
