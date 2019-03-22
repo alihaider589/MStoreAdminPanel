@@ -43,7 +43,9 @@ onPress={()=>this.props.navigation.toggleDrawer()}
 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{margin:20}}>
 <View style={{margin:10}}>
 
-<TouchableOpacity style={{alignSelf:'center',borderColor:'rgb(95, 101, 252)',borderWidth:3,borderRadius:50,backgroundColor:'rgb(158, 162, 253)'}}>
+<TouchableOpacity
+onPress={()=>this.props.navigation.navigate("Analytics")}
+style={{alignSelf:'center',borderColor:'rgb(95, 101, 252)',borderWidth:3,borderRadius:50,backgroundColor:'rgb(158, 162, 253)'}}>
 <View style={{height:80,width:80,justifyContent:'center',marginLeft: 5,alignItems: 'center',}}>
 
 <Icon  name="pulse" style={{color:'rgb(95, 101, 252)'}}/>

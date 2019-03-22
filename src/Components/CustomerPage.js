@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text,Image ,Dimensions} from 'react-native';
-import { Container, Left,Header,Title,Right,Body,List,ListItem, Thumbnail } from 'native-base';
-import { TouchableOpacity, ScrollView } from 'react-native-gesture-handler';
+import { View, Text,Image ,Dimensions,TouchableOpacity, ScrollView } from 'react-native';
+import { Container, Left,Header,Title,Right,Body,List,ListItem, Thumbnail,Icon, } from 'native-base';
 
 export default class Customerpage extends Component {
   constructor(props) {
@@ -18,19 +17,24 @@ export default class Customerpage extends Component {
     const Name = this.props.navigation.getParam('Title')
     return (
    <Container style={{flex:1,width:screenWidth}}> 
-<Header >
+<Header  style={{backgroundColor:'white',borderBottomWidth:3,borderBottomColor:'rgb(207, 207, 207)'}}>
+<Left>
+  <TouchableOpacity
+  onPress={()=>this.props.navigation.navigate("Customers")}
+  >
 
-<Left >
-<TouchableOpacity onPress={()=>this.props.navigation.navigate('Customers')}>
-
-    <Image source={{uri:'https://image.flaticon.com/icons/png/512/60/60972.png'}} style={{height:20,width:20}} /> 
-</TouchableOpacity>
+<Image source={{uri:"https://image.flaticon.com/icons/png/512/60/60972.png" }}style={{height:20,width:20}}/>
+  </TouchableOpacity>
 </Left>
 <Body>
-    <Title style={{color:'black',fontWeight:'bold',fontSize:15,}}>{Name}</Title>
+<Title style={{fontSize:15,fontWeight:'bold',color:'black'}} >
 
+{Name}
+</Title>
 </Body>
+
 </Header>
+
        
 <ScrollView showsVerticalScrollIndicator={false}>
        <View style={{width:screenWidth,alignItems:'center'}}>
